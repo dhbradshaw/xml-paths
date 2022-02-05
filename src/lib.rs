@@ -28,3 +28,25 @@ pub fn paths(path: &str) -> Result<Vec<String>, Box<dyn std::error::Error>> {
     xpath_strings.sort();
     Ok(xpath_strings)
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_paths() {
+        let paths = paths("example_data/note.xml").unwrap();
+        assert_eq!(
+            paths,
+            vec![
+                "",
+                "notes",
+                "notes/note",
+                "notes/note/body",
+                "notes/note/from",
+                "notes/note/heading",
+                "notes/note/to"
+            ]
+        );
+    }
+}
