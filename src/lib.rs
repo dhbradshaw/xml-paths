@@ -35,17 +35,17 @@ mod tests {
 
     #[test]
     fn test_paths() {
-        let paths = paths("example_data/note.xml").unwrap();
+        let paths = paths("example_data/notes.xml").unwrap();
         assert_eq!(
             paths,
             vec![
-                "",
-                "notes",
-                "notes/note",
-                "notes/note/body",
-                "notes/note/from",
-                "notes/note/heading",
-                "notes/note/to"
+                "/",
+                "/notes",
+                "/notes/note",
+                "/notes/note/body",
+                "/notes/note/from",
+                "/notes/note/heading",
+                "/notes/note/to"
             ]
         );
     }
