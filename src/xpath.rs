@@ -19,7 +19,7 @@ pub struct XPath(Vec<String>);
 
 impl XPath {
     pub fn new() -> Self {
-        Self(vec![])
+        Self(vec!["".to_owned()])
     }
     pub fn push(&mut self, tag: String) {
         self.0.push(tag);
@@ -31,7 +31,12 @@ impl XPath {
         assert_eq!(self.pop().expect("can't end without starting."), tag);
     }
     pub fn as_string(&self) -> String {
-        self.0.join("/")
+        let nodes = &self.0;
+        if nodes.len() == 1 {
+            "/".to_owned()
+        } else {
+            self.0.join("/")
+        }
     }
 }
 
