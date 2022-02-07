@@ -3,6 +3,7 @@ description = "Tool to quickly see the structure of an xml file by listing all t
 edition = "2021"
 license = "MIT"
 name = "xml-paths"
+repository = "https://github.com/dhbradshaw/xml-paths"
 version = "0.1.0"
 
 [dependencies]
