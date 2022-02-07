@@ -1,6 +1,7 @@
 [package]
 description = "Tool to quickly see the structure of an xml file by listing all the tag paths present in the file."
 edition = "2021"
+license = "MIT"
 name = "xml-paths"
 version = "0.1.0"
 
